@@ -1,0 +1,53 @@
+{
+  "fruits": [
+    {
+      "nom": "Pomme",
+      "origine": "France",
+      "prix_unitaire": 2.5
+    },
+    {
+      "nom": "Banane",
+      "origine": "Équateur",
+      "prix_unitaire": 1.2
+    },
+    {
+      "nom": "Orange",
+      "origine": "Espagne",
+      "prix_unitaire": 3.0
+    }
+  ],
+  "legumes": [
+    {
+      "nom": "Carotte",
+      "origine": "France",
+      "prix_unitaire": 1.5
+    },
+    {
+      "nom": "Tomate",
+      "origine": "Italie",
+      "prix_unitaire": 2.0
+    },
+    {
+      "nom": "Brocoli",
+      "origine": "Espagne",
+      "prix_unitaire": 2.8
+    }
+  ],
+  "fleurs": [
+    {
+      "nom": "Rose",
+      "origine": "Colombie",
+      "prix_unitaire": 5.0
+    },
+    {
+      "nom": "Tulipe",
+      "origine": "Pays-Bas",
+      "prix_unitaire": 4.5
+    },
+    {
+      "nom": "Lys",
+      "origine": "Madagascar",
+      "prix_unitaire": 6.0
+    }
+  ]
+}

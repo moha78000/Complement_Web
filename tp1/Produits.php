@@ -6,7 +6,9 @@ class Produits {
 
     public $origin;
 
-    public $prix;
+    public $prix_HT;
+
+    public $prix_TTC;
 
     public $tva_UE = 0.15;
 
@@ -15,18 +17,18 @@ class Produits {
     public function __construct($nom, $origin , $prix) {
         $this->nom = $nom;
         $this->origin = $origin;
-        $this-> prix = $prix;
+        $this-> prix_HT = $prix;
     }
 
 
     public function information(){
-        return("$this->nom , $this->origin , $this->prix");
+        return("$this->nom , $this->origin , $this->prix_HT");
     }
 
 
     public function getprix_HT()
     {
-        return $this->prix;
+        return $this->prix_HT;
     }/**
  * @param mixed prix
  */
@@ -37,7 +39,18 @@ class Produits {
         return $this->origin;
     }
 
-    public function prixHT
+    public function calculTVA(){
+        if ($this->origin == "UE"){
+            ($this->prixTTC = $this->prix_HT * $this->tva_UE)*100;
+        }
+
+        else {
+            ($this->prixTTC = $this->prix_HT * $this->tva_hors_UE)*100;
+
+        }
+
+
+    }
 
 
 
