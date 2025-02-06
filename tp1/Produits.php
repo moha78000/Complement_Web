@@ -10,9 +10,9 @@ class Produits {
 
     public $prix_TTC;
 
-    public $tva_UE = 0.15;
+    public $tva_UE = 1.15;
 
-    public $tva_hors_UE = 0.18;
+    public $tva_hors_UE = 1.18;
 
     public function __construct($nom, $origin , $prix) {
         $this->nom = $nom;
