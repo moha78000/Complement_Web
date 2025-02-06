@@ -14,10 +14,12 @@ class Produits {
 
     public $tva_hors_UE = 1.18;
 
-    public function __construct($nom, $origin , $prix) {
+    public function __construct($nom, $origin , $prix_HT , $prix_TTC) {
         $this->nom = $nom;
         $this->origin = $origin;
-        $this-> prix_HT = $prix;
+        $this-> prix_HT = $prix_HT;
+        $this-> prix_TTC = $prix_TTC;
+
     }
 
 
