@@ -1,5 +1,4 @@
 <?php
-
 class Produit {
     public $nom;
     public $origine;

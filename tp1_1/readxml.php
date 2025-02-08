@@ -2,7 +2,7 @@
 require_once 'Produit.php';
 // Charger le fichier XML
 $xml_file = 'commerce.xml';
-$xml = simplexml_load_file($xml_file) or die("Erreur : Impossible de charger le fichier XML.");
+$read = simplexml_load_file($xml_file) or die("Erreur : Impossible de charger le fichier XML.");
 
 // Fonction pour écrire les données dans un fichier CSV
 function ecrireCSV($nom_fichier, $produits) {
@@ -28,17 +28,17 @@ $legumes = [];
 $fleurs = [];
 
 // Lire les fruits
-foreach ($xml->fruits->fruit as $fruit) {
+foreach ($read->fruits->fruit as $fruit) {
     $fruits[] = new Produit((string) $fruit->nom, (string) $fruit->origine, (float) $fruit->prix_unitaire);
 }
 
 // Lire les légumes
-foreach ($xml->legumes->legume as $legume) {
+foreach ($read->legumes->legume as $legume) {
     $legumes[] = new Produit((string) $legume->nom, (string) $legume->origine, (float) $legume->prix_unitaire);
 }
 
 // Lire les fleurs
-foreach ($xml->fleurs->fleur as $fleur) {
+foreach ($read->fleurs->fleur as $fleur) {
     $fleurs[] = new Produit((string) $fleur->nom, (string) $fleur->origine, (float) $fleur->prix_unitaire);
 }
 
